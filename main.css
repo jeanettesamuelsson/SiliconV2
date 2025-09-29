@@ -8,7 +8,7 @@
 
 :root {
     --heading-color: #0B0F19;
-    --text-color: #565973;
+    --text-color: #32333d;
     --text-color600: #9397AD;
     --text-color700: #565973;
     --background-color: #ffffff;
@@ -395,6 +395,13 @@ input:checked+#slider:before {
     gap: 2rem;
 }
 
+#features-text1 ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
 
 #features-text2 {
    display: flex;
@@ -597,7 +604,7 @@ input:checked+#slider:before {
 }
 
 #contact-box1 a {
-    color: blue;
+    color: rgb(63, 63, 252);
     font-size: 15px;
 }
 
@@ -703,8 +710,8 @@ input {
     border-bottom-left-radius: 8px;
     border: 1px solid rgb(199, 199, 199);
     width: 15rem;
-
-
+    background-color: var(--alt-background-color);
+    color: var(--text-color);
 }
 
 input::placeholder {
