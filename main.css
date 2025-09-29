@@ -916,11 +916,25 @@ footer p {
     font-size: 1rem;
    }
 
-    #subscribe-desktop {
-        display: none;
+     #subscribe-section #section-1{
+        max-width: 50%;
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+     }
+    
+     #subscribe-section #section-2{
+        max-width: 50%;
+        margin: 1rem;
      }
 
-    #subscribe-tablet {
+    
+     #subscribe-desktop {
+        display: none;
+    }
+
+     #subscribe-tablet {
         display: block;
       
      }
@@ -928,7 +942,7 @@ footer p {
 
 
      /* Mobil */
-    @media (max-width: 390px) {
+@media (max-width: 390px) {
 
     /* Hero section */
 
@@ -1018,7 +1032,8 @@ footer p {
         
     }
 
-    #subscribe-section {
+
+      #subscribe-section {
     flex-direction: column; 
     align-items: center;
     text-align: center;
@@ -1041,15 +1056,15 @@ footer p {
   }
 
   #subscribe-btn {
-    border: 8px;
+    border-top-right-radius: 8px;
     width: fit-content;
   }
-  
-  #subscribe-desktop {
+
+    #subscribe-desktop {
         display: none;
      }
 
-  #subscribe-tablet {
+     #subscribe-tablet {
         display: block;
       
      } 
