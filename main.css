@@ -149,7 +149,6 @@ input:checked+#slider:before {
 }
 
 #hero-section {
-   
     max-width: 1296px;
     margin-left: auto;
     margin-right: auto;
@@ -485,35 +484,35 @@ input:checked+#slider:before {
 
 #testimonials-content {
     max-width: 1296px;
-    width: 100%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+ 
 
 }
 
-
 #testimonials-content .H1 {
-    flex: 0 0 350px;
     text-align: left;
-
+    max-width: 33%;
+    flex: 0 0 33%;
+    text-align: left;
 }
 
 #cards {
-    margin: 150px;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 100px;
+    gap: 5%;
+    
 
 }
 
 .card {
-
     background-color: var(--background-color);
     display: flex;
     flex-direction: column;
@@ -521,13 +520,13 @@ input:checked+#slider:before {
     gap: 20px;
     padding: 50px;
     border-radius: 3px;
-    flex: 0 0 400px;
     position: relative;
+    max-width: 50%;
 
 }
 
 .card p {
-    font-size: 18px;
+    font-size: 1rem;
     color: var(--text-color700);
 }
 
@@ -537,9 +536,7 @@ input:checked+#slider:before {
     justify-content: center;
     gap: 1rem;
     color: var(--text-color);
-  
 }
-
 
 #quotes {
     position: absolute;
@@ -693,43 +690,71 @@ input:checked+#slider:before {
 
 }
 
-
 #subscribe-section {
-     background-color: var(--alt-background-color);
-
+  background-color: var(--alt-background-color);
+  max-width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row; /* desktop: bredvid varandra */
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
+#subscribe-section .H4 {
+  font-size: 1.2rem;
+}
+
+#section-1 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#section-2 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+#section-2 input {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border: 1px solid rgb(199, 199, 199);
+  width: 20rem;
+  height: 3rem;
+  max-width: 100%;
+  background-color: var(--alt-background-color);
+  color: var(--text-color);
+}
+
+#section-2 input::placeholder {
+  font-size: 1rem;
+}
 
 #subscribe-btn {
-    background-color: #6366F1;
-    padding: 15px 25px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    cursor: pointer;
-    color: #FFFF;
-    font-size: 1rem;
-    border: 1px solid rgb(198, 198, 198);
-
+  background-color: #6366F1;
+  padding: 15px 25px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1rem;
+  border: 1px solid rgb(198, 198, 198);
 }
 
 #subscribe-btn:hover {
-     background-color:#a5a6ea;
-     border: 1px solid black;
-
+  background-color:#a5a6ea;
+  border: 1px solid black;
 }
+
+
 
 #subscribe-tablet {
     display: none; 
 }
 
-input {
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-    border: 1px solid rgb(199, 199, 199);
-    width: 15rem;
-    background-color: var(--alt-background-color);
-    color: var(--text-color);
-}
 
 input::placeholder {
     font-size: 1rem;
@@ -745,7 +770,7 @@ footer p {
     color: var(--text-color600);
 }
 
-
+/* Media queries */
 
 /* Tablet */
 @media (min-width: 391px) and (max-width: 769px) {
@@ -899,6 +924,7 @@ footer p {
         margin: 1rem;
      }
 
+    
      #subscribe-desktop {
         display: none;
      }
@@ -1001,36 +1027,40 @@ footer p {
         
     }
 
-    /* Subscribe */
 
-    #subscribe-section {
-       max-width: 80%;
-       padding:0;
-    }
+      #subscribe-section {
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
 
-    #subscribe-section .H4 {
-        font-size: 1rem;
-    }
+  #section-1 {
+    justify-content: center;
+    text-align: center;
+  }
 
-     #subscribe-section #section-1{
-        max-width: 50%;
-        gap: 10px;
-        display: flex;
-        align-items: center;
-        padding: 1rem;
-     }
-    
-     #subscribe-section #section-2{
-        max-width: 50%;
-        margin: 1rem;
-     }
+  #section-2 {
+    flex-direction: row; 
+    width: 100%;
+  }
 
-     #subscribe-desktop {
+  #section-2 input {
+    width: 100%;
+    max-width: 20rem;
+  }
+
+  #subscribe-btn {
+    border-top-right-radius: 8px;
+    width: fit-content;
+  }
+
+    #subscribe-desktop {
         display: none;
      }
 
      #subscribe-tablet {
         display: block;
       
-     }
+     } 
 }
