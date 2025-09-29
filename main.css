@@ -373,6 +373,10 @@ input:checked+#slider:before {
   
 }
 
+#thirdpage-mobile {
+    display: none;
+}
+
 #features h3 {
     color: var(--heading-color);
 }
@@ -744,7 +748,7 @@ footer p {
 
 
 /* Tablet */
-@media (max-width: 769px) {
+@media (min-width: 391px) and (max-width: 769px) {
 
 /* Hero section */
 
@@ -903,13 +907,130 @@ footer p {
         display: block;
       
      }
-
+    }
 
 
      /* Mobil */
 @media (max-width: 390px) {
 
-}
+    /* Hero section */
 
+    #hero-section {
+        margin: 1rem 2rem;
+    }
 
+    #hero-image  {
+        display: none;
+    }
+
+    #second-page {
+        margin-top: 50%;
+        margin-left: 2rem;
+    }
+
+    /* App features */
+
+    #appfeatures-text {
+        text-align: center;
+    }
+
+     #appfeatures-image  {
+        display: none;
+    }
+
+    /* How does it work */
+
+    #third-page {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #thirdpage-desktop {
+    display: none;
+   }
+
+   #thirdpage-mobile {
+    display: block;
+    border-radius: 25px;
+  }
+
+    #logos {
+        display: none;
+    }
+
+    #grid-container {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    #features {
+        display: none;
+    }
+
+    #testimonials {
+        display: none;
+    }
+
+    /* FAQ */
+
+    #FAQ {
+       display: flex;
+       flex-direction: column;
+    }
+
+    #contact-boxes {
+        display:none;
+    }
+
+     #FAQ-text {
+        max-width: 90%;
+        text-align: center;
+        margin-left: 10%;
+       margin-right: 10%;
+    }
+
+    #FAQ-text h3 {
+        font-size: 1.5rem;
+    }
+  
+    #accordion-container {
+        margin: 0;
+        
+    }
+
+    /* Subscribe */
+
+    #subscribe-section {
+       max-width: 80%;
+       padding:0;
+    }
+
+    #subscribe-section .H4 {
+        font-size: 1rem;
+    }
+
+     #subscribe-section #section-1{
+        max-width: 50%;
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+     }
+    
+     #subscribe-section #section-2{
+        max-width: 50%;
+        margin: 1rem;
+     }
+
+     #subscribe-desktop {
+        display: none;
+     }
+
+     #subscribe-tablet {
+        display: block;
+      
+     }
 }
