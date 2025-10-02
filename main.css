@@ -159,41 +159,41 @@ input:checked+#slider:before {
     font-size: 56px;
     color: var(--text-color);
     font-weight: 500;
+    grid-area: title;
 }
 
 .hero-subtitle {
 
     font-size: 18px;
-    color: var(--text-color);
-}
-
-#hero-logos {
-
-    display: flex;
-    justify-content: left;
-    gap: 24px;
-    margin-top: 20px;
-
+    color: var(--text-color700);
+    grid-area: subtitle;
 }
 
 #hero-content {
 
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "title img"
+                        "subtitle img"
+                        "logos  img"
+                        ". img";
     margin-top: 60px;
+    gap: 3rem;
 
 }
 
-#hero-left {
-    width: 530px;
-    height: 328px;
+#hero-logos {
+    grid-area: logos;
     display: flex;
-    flex-direction: column;
-    gap: 25px;
-
+    justify-content: left;
+    gap: 24px;
+    margin-top: 20px;
 }
 
 #hero-image {
-    max-width: 100%;
+    grid-area: img;
+    max-width: 100%;  
+    height: auto;  
 }
 
 /* App features - section */
@@ -580,15 +580,11 @@ input:checked+#slider:before {
 #contact-boxes {
     grid-area: cards;
     margin-left: 20%;
-
 }
 
 #accordion-container {
     grid-area: accordion;
 }
-
-
-
 
 #contact-boxes {
     display: flex;
@@ -665,7 +661,6 @@ input:checked+#slider:before {
     background-color: var(--alt-background-color);
 }
 
-
 .accordion::after {
 
     content: "\25BC";
@@ -679,7 +674,6 @@ input:checked+#slider:before {
 
 }
 
-
 .accordion.active::after {
     content: "\25B2";
     background-color: #6262e0;
@@ -692,7 +686,6 @@ input:checked+#slider:before {
     display: none;
     overflow: hidden;
     color: var(--text-color);
-
 }
 
 #subscribe-section {
@@ -784,10 +777,6 @@ footer p {
         margin: 1rem;
     }
 
-    #hero-section {
-        min-height: 700px;
-    }
-
     #sign-btn span {
         display: none;
     }
@@ -797,40 +786,44 @@ footer p {
     }
 
     #hero-content {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        align-items: center;
-    }
 
-    #hero-left {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        padding: 1rem;
-    }
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-areas: "title title"
+                         "subtitle img"
+                         "logos img"
+                         ". img";
+    margin: 2rem;
+    } 
 
-    #hero-right {
-        position: relative;
+    #hero-logos {
+    grid-area: logos;
+    display: flex;
+    justify-content: left;
+    gap: 2rem;
     }
 
     #hero-image {
-        max-width: 100%;
-        height: auto;
-        position: relative;
-        left: 100px;
-        top: 200px;
-    }
+    grid-area: img;
+    max-width: 100%;  
+    height: auto;  
+    margin-left: 3rem;
+   }
 
     .hero-title {
-            text-align: center;
-            font-size: 2rem;
-            font-weight: 600;
-            max-width: 100%;
+        grid-area: title;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 600;
+        max-width: 100%;
+        margin-bottom: 3rem;
         }
 
-    #hero-logos {
-            justify-content: center;
+    .hero-subtitle {
+        grid-area: subtitle;
         }
+
+  
 
     /* App features section */
 
@@ -946,9 +939,11 @@ footer p {
     .hero-title {
         font-size: 1.6rem;
         font-weight: 600;
-        max-width: 90%;
         text-align: center;
+    }
 
+    .hero-subtitle {
+        text-align: center;
     }
 
     #hero-logos {
@@ -961,7 +956,9 @@ footer p {
     }
 
     #hero-content {
-        height: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
     }
 
     #hero-section {
